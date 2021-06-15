@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>點餐系統</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <div class="container container-fluid">
+            <img src="./img/icon.png" class="img-fluid" style="width: 3vw;">
+            <a class="navbar-brand fw-bold fs-3" href="./index.html">點餐系統</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse fs-5">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">XXX</a>
+                    </li> -->
+                    <div class="dropdown-divider"></div>
+                </ul>
+            </div>
+            <!-- <div id="item_num">0</div> -->
+            <!-- <img id="shopping-cart" src="./img/shopping-cart.png" class="img-fluid" style="width: 2vw;"> -->
+        </div>
+    </nav>
+
+    <div class="container-fluid container text-center ">
+        <div class="m-3 fs-1"> 合作商家 </div>
+        <div class="row  d-flex">
+            <div class="">
+                <button id="r1" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 ">	北北基 </button>
+                <button id="r2" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 "> 桃竹苗 </button>
+                <button id="r3" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 ">	中彰投 </button>
+                <button id="r4" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 ">	雲嘉南 </button>
+                <button id="r5" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 "> 宜花東 </button>
+                <button id="r6" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 "> 高屏 </button>
+            </div>
+
+            <div id="r1-c" class="content mt-5">
+                <div class="row  justify-content-center ">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/1.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家1</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/2.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家2</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="row  justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/3.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家3</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/4.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家4</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="r2-c" class="content mt-5 ">
+                <div class="row justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/5.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家5</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/6.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家6</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="row  justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/7.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家7</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/8.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家8</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="r3-c" class="content mt-5 ">
+                <div class="row justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/9.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家9</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/10.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家10</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row  justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/11.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家11</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/12.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家12</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="r4-c" class="content mt-5 ">
+                <div class="row justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/13.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家13</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/14.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家14</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="row  justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/15.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家15</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/16.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家16</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="r5-c" class="content mt-5 ">
+                <div class="row justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/17.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家17</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/18.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家18</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="row  justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/17.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家19</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/18.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家20</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="r6-c" class="content mt-5 ">
+                <div class="row justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/21.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家21</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/22.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家22</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="row  justify-content-center">
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/23.jpg " class="card-img-top " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家23</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow m-3 p-0 " style="width: 18rem; ">
+                        <a href="index2.html">
+                            <img src="./img/24.jpg " class="card-img-top m-0 " alt="... ">
+                            <div class="card-body ">
+                                <p class="card-text fw-bold fs-4">店家24</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div id="container">
+        <p class="h4 float-left m-3 mt-0">-----------購物車-----------</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+
+    <script>
+        $(document).ready(function() {
+            // mouseon scale
+            $(".card ").mouseover(function() {
+                $(this).css("transform", "scale(1.05)");
+            });
+            $(".card ").mouseout(function() {
+                $(this).css("transform", "scale(1)");
+            });
+
+            // content reset/change by btnclick
+            for (let i = 2; i <= 6; i++) {
+                $('#r' + i + '-c').css("display", "none");
+            }
+            $("button ").click(function() {
+                for (let i = 1; i <= 6; i++) {
+                    $('#r' + i + '-c').css("display", "none");
+                }
+                $('#' + this.id + '-c').css("display", "block");
+            });
+        });
+    </script>
+</body>
+
+</html>

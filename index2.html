@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>點餐系統</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <div class="container container-fluid">
+            <img src="./img/icon.png" class="img-fluid" style="width: 3vw;">
+            <a class="navbar-brand fw-bold fs-3" href="./index.html">點餐系統</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse fs-5">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">XXX</a>
+                    </li> -->
+                    <div class="dropdown-divider"></div>
+                </ul>
+            </div>
+            <div id="item_num">0</div>
+            <img id="shopping-cart" src="./img/shopping-cart.png" class="img-fluid" style="width: 2vw;">
+        </div>
+    </nav>
+
+    <div class="container-fluid container text-center ">
+        <div class="mt-5 fs-1 fw-bold "> 歡迎光臨 - 點擊商品即可選擇 </div>
+        <div class="row  d-flex">
+            <div class="">
+                <button id="r1" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 ">	飯類 </button>
+                <button id="r2" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 "> 麵類 </button>
+                <button id="r3" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 ">	點心 </button>
+                <button id="r4" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 ">	飲料 </button>
+                <button id="r5" class="btn-lg btn-primary text-nowrap text-light m-2 p-2 "> 其他 </button>
+            </div>
+
+            <div id="r1-c" class="content mt-5">
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/1.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/2.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/3.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/4.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/5.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/6.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="r2-c" class="content mt-5 ">
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/7.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點7</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/8.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點8</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/9.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點9</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/10.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/11.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點11</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/12.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點12</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="r3-c" class="content mt-5 ">
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/13.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點13</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/14.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點14</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/15.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點15</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/16.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點16</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/17.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點17</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/18.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點18</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="r4-c" class="content mt-5 ">
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/19.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點19</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/20.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點20</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/21.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點21</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/22.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點22</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/23.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點23</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/24.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點24</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="r5-c" class="content mt-5 ">
+                <div class="row  justify-content-center ">
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/1.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點25</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/2.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點26</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item card shadow m-3 p-0 h-50" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#food-modal">
+                        <div class="row align-items-center">
+                            <div class="col-7 p-0">
+                                <img src="./img/3.jpg " class="card-img-top" alt="... ">
+                            </div>
+                            <div class="col">
+                                <div class="card-body d-flex">
+                                    <div class="card-text fw-bold fs-4">餐點27</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div id="container">
+        <p class="h4 float-left m-3 mt-0">-----------購物車-----------</p>
+    </div>
+
+    <div class="modal fade" id="food-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="item-name" class="modal-title fw-bold fs-3" id="exampleModalToggleLabel">商品名稱</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <img id="item-img" src="./img/1.jpg " class="card-img-top col" alt="... ">
+                        <div class="m-3 col">
+                            <p>購買數量:</p>
+                            <div class="mt-3 text-center">
+                                <span id="delete" class="btn btn-primary">-</span>
+                                <span id="item-counter" class="p-3">0</span>
+                                <span id="add" class="btn btn-primary">+</span>
+                            </div>
+                            <span id="addCart" class="mt-5 float-right btn btn-primary" data-bs-dismiss="modal">加入購物車</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+
+    <script>
+        $(document).ready(function() {
+            // mouseon scale
+            var item_counter = 0;
+            $(".card ").mouseover(function() {
+                $(this).css("transform", "scale(1.05)");
+            });
+            $(".card").mouseout(function() {
+                $(this).css("transform", "scale(1)");
+            });
+
+            // content reset/change by btnclick
+            for (let i = 2; i <= 6; i++) {
+                $('#r' + i + '-c').css("display", "none");
+            }
+            $("button").click(function() {
+                for (let i = 1; i <= 6; i++) {
+                    $('#r' + i + '-c').css("display", "none");
+                }
+                $('#' + this.id + '-c').css("display", "block");
+            });
+
+            $("#add").click(function() {
+                item_counter++;
+                $("#item-counter").text(item_counter);
+            });
+            $("#delete").click(function() {
+                if (item_counter != 0)
+                    item_counter--;
+                $("#item-counter").text(item_counter);
+            });
+
+            $(".food-item").click(function() {
+                item_counter = 0;
+                $("#item-counter").text(item_counter);
+                $("#item-img").attr("src", $(this).find("img").attr("src"));
+                $("#item-name").text($(this).find(".card-text").text());
+            });
+
+
+            //加入商品到購物車
+            $("#addCart").click(function() {
+                if (item_counter > 0) {
+                    var content =
+                        `<div class="cart_item">
+                        <img class="cart_image" src="${$(this).parent().parent().find("img").attr("src")}">
+                        <div class="cart_text row">
+                            <p>${$(this).parent().parent().parent().parent().find("#item-name").text()}</p>
+                            <div class="col">
+                                <p>數量: <span id="cart-item-cnt">${item_counter}</span> <span class="float-right"> <img class="delete" src="./img/delete.png"></span> </p>
+                            </div>
+                        </div>
+                    </div>`;
+                    $("#container").append(content);
+
+                    count += item_counter;
+                    $("#item_num").text(count);
+                }
+            })
+
+
+            // shop
+            var count = 0; //商品數量
+            $("#shopping-cart").click(function() {
+                    console.log("click")
+                    $("#container").toggle();
+                    $("#container").css("left", "80vw").css("top", "30vh")
+                })
+                //開關購物車
+            $("#container").on("click", ".delete", function() {
+                $(this).parent().parent().parent().parent().parent().fadeOut(500, function() {
+                    $(this).remove();
+                })
+                count -= parseInt($(this).parent().parent().parent().parent().parent().find("#cart-item-cnt").text());
+                $("#item_num").text(count);
+            });
+            //刪除購物車內的商品
+
+            $("#container").mousedown(function(e) {
+                //設定移動後的預設位置
+                var endx = 0;
+                var endy = 0;
+                //獲取div的初始位置，要注意的是需要轉整型，因為獲取到值帶px
+                var left = parseInt($("#container").css("left"));
+                var top = parseInt($("#container").css("top"));
+                //獲取滑鼠按下時的座標，區別於下面的es.pageX,es.pageY
+                var downx = e.pageX;
+                var downy = e.pageY; //pageY的y要大寫，必須大寫！！
+                //  滑鼠按下時給div掛事件
+                $("#container").bind("mousemove", function(es) {
+                    //es.pageX,es.pageY:獲取滑鼠移動後的座標
+                    var endx = es.pageX - downx + left; //計算div的最終位置
+                    var endy = es.pageY - downy + top;
+                    //帶上單位
+                    $("#container").css("left", endx + "px").css("top", endy + "px")
+                });
+            });
+
+            $("#container").mouseup(function() {
+                //滑鼠彈起時給div取消事件
+                $("#container").unbind("mousemove")
+            });
+
+
+        })
+    </script>
+</body>
+
+</html>
